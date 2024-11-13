@@ -24,7 +24,7 @@ locals {
     rule_index = firewall_rule.rule_index
 
     # project_id = firewall_rule.project_id != null ? firewall_rule.project_id : var.project_id
-    project_id = coalesce(firewall_rule.project_id, var.project_id)
+    project_id = coalesce(firewall_rule.project_id, var.project)
 
     # network    = firewall_rule.network != null ? firewall_rule.network : var.network
     network = coalesce(firewall_rule.network, var.network)

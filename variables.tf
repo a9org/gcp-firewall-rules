@@ -62,7 +62,7 @@ variable "firewall_rules" {
   }
 }
 
-variable "project_id" {
+variable "project" {
   type        = string
   description = "Project id of the project that holds the network."
   default     = null
