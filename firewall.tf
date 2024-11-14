@@ -94,7 +94,7 @@ locals {
 }
 
 resource "google_compute_firewall" "firewall_rule" {
-  for_each = var.use_legacy_naming ? local.firewall_rules_legacy : local.firewall_rules
+  for_each = local.firewall_rules
   name     = each.value.name != local.defaults_firewall_rule.name ? each.value.name : each.key
   project  = each.value.project_id
   network  = each.value.network
